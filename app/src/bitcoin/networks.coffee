@@ -118,6 +118,14 @@ bitcoin.networks.digibyte =
   pubKeyHash: 30
   scriptHash: 5
 
+bitcoin.networks.argentum =
+  magicPrefix: '\x19Argentum Signed Message:\n'
+  bip32:
+    public: 0x0488b21e,
+    private: 0x05358394
+  pubKeyHash: 23
+  scriptHash: 5
+
 ledger.bitcoin ||= {}
 ledger.bitcoin.Networks =
   bitcoin:
@@ -874,5 +882,26 @@ ledger.bitcoin.Networks =
       XPUB: 0x0488b21E
     bitcoinjs: bitcoin.networks.digibyte
     dust: 10000
+    handleFeePerByte: no
+    areTransactionTimestamped: no
+
+  argentum:
+    name: 'argentum'
+    display_name: 'argentum'
+    plural: 'argentum'
+    scheme: 'argentum:'
+    bolosAppName: 'argentum'
+    ticker: 'arg'
+    tickerKey:
+      from: 'fromARG'
+      to: 'toARG'
+    bip44_coin_type: '45'
+    isSegwitSupported: no
+    version:
+      regular: 23
+      P2SH: 5
+      XPUB: 0x0488b21E
+    bitcoinjs: bitcoin.networks.argentum
+    dust: 5430
     handleFeePerByte: no
     areTransactionTimestamped: no

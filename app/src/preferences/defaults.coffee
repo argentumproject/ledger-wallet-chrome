@@ -717,4 +717,22 @@ ledger.preferences.digibyte =
         address: 'https://digiexplorer.info/tx/%s'
     discoveryGap: 20
 
+ledger.preferences.argentum =
+  Display:
+    units:
+      bitcoin:
+        symbol: 'ARG'
+        unit: 8
+
+# Coin preferences
+  Coin:
+    explorers:
+      cryptoID:
+        name: 'CryptoID'
+        address: 'https://chainz.cryptoid.info/arg/tx.dws?%s.htm'
+      prohashing:
+        name: 'prohashing.com'
+        address: 'https://prohashing.com/explorer/Argentum/%s'
+    discoveryGap: 20
+
 ledger.preferences.common.setCoin("bitcoin")
